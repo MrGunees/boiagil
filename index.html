@@ -39,7 +39,7 @@
 <body>
 
 <h1>Política de Privacidade — BOI Ágil</h1>
-<p class="muted">Última atualização: 9 de setembro de 2026</p>
+<p class="muted">Última atualização: 26 de setembro de 2026</p>
 
 <div class="box">
   <p>
@@ -266,18 +266,37 @@
   Conforme os recursos utilizados, o BOI Ágil pode interagir com serviços externos,
   incluindo ViaCEP, serviço de geocodificação disponível no Android, mecanismo de
   reconhecimento de fala configurado no dispositivo, serviços da Google Play,
-  Google Code Scanner, fonte configurada para atualização do catálogo técnico/jurídico
-  de trânsito e aplicativos escolhidos pelo usuário para abrir ou compartilhar arquivos.
+  Google Code Scanner, modelos embarcados do ML Kit para leitura local de placa/QR,
+  fonte configurada para atualização do catálogo técnico/jurídico de trânsito e aplicativos
+  escolhidos pelo usuário para abrir ou compartilhar arquivos.
 </p>
 <p>
-  A localização é acessada somente quando o usuário solicita o preenchimento por GPS,
-  sem localização em segundo plano. O microfone é utilizado somente quando o usuário
-  inicia o ditado por voz ou uma gravação de áudio.
+  Na consulta de endereço por CEP, somente o CEP informado é enviado ao ViaCEP para obter
+  os dados de endereço correspondentes. A localização é acessada somente quando o usuário
+  solicita o preenchimento por GPS, sem localização em segundo plano. Quando a geocodificação
+  é utilizada, as coordenadas necessárias podem ser encaminhadas ao serviço de geocodificação
+  disponibilizado pelo sistema Android para obtenção do endereço correspondente.
 </p>
 <p>
-  A leitura opcional de QR Code utiliza o Google Code Scanner. O conteúdo integral do
-  boletim não é enviado ao scanner. A consulta e o download de atualizações do catálogo,
-  quando configurados, ocorrem por HTTPS e não enviam o conteúdo dos boletins.
+  O microfone é utilizado somente quando o usuário inicia o ditado por voz ou uma gravação
+  de áudio. No ditado, o áudio e/ou os dados necessários ao reconhecimento podem ser processados
+  pelo serviço de reconhecimento de fala configurado no dispositivo, de acordo com as regras
+  e a política de privacidade do respectivo provedor. O BOI Ágil não envia automaticamente o
+  conteúdo integral do boletim para esse serviço.
+</p>
+<p>
+  O corretor ortográfico próprio do BOI Ágil funciona localmente no dispositivo, utilizando
+  dicionário embarcado e dicionário pessoal local. O texto analisado pelo corretor não é
+  transmitido pelo BOI Ágil a servidor externo para geração das sugestões.
+</p>
+<p>
+  A leitura opcional de QR Code em fluxos já existentes pode utilizar o Google Code Scanner.
+  No módulo de remoção de veículo, quando o usuário escolhe ESCANEAR VEÍCULO, a câmera do
+  aparelho captura uma imagem temporária e o aplicativo processa localmente essa imagem com
+  modelos embarcados do ML Kit para reconhecer a placa por OCR e tentar ler QR Code na mesma
+  foto. A imagem temporária usada apenas para a leitura é excluída após o processamento e não
+  é enviada pelo BOI Ágil a servidor próprio. A consulta e o download de atualizações do
+  catálogo, quando configurados, ocorrem por HTTPS e não enviam o conteúdo dos boletins.
 </p>
 <p>
   O usuário também pode abrir ou compartilhar arquivos utilizando aplicativos e serviços
@@ -289,22 +308,47 @@
   comportamental.
 </p>
 
-<h2>15. Responsabilidade pelo uso</h2>
+<h2>15. Diagnóstico técnico e feedback</h2>
+<p>
+  Para auxiliar na identificação de falhas, o BOI Ágil mantém localmente um registro técnico
+  limitado de eventos do aplicativo e de exceções. Esse registro pode conter data e hora do
+  evento, identificadores técnicos de funcionamento e informações de pilha de erro, quando
+  aplicável.
+</p>
+<p>
+  Quando o usuário escolhe a opção INFORMAR PROBLEMA / ENVIAR FEEDBACK, o aplicativo gera um
+  arquivo de diagnóstico técnico e o anexa à mensagem de e-mail preparada para o usuário.
+  Esse arquivo pode conter versão e código da versão do BOI Ágil, versão do Android, nível do
+  SDK, fabricante, modelo do dispositivo e os últimos eventos técnicos registrados.
+</p>
+<p>
+  O diagnóstico técnico gerado pelo BOI Ágil não inclui conteúdo dos boletins, CPF, RG, nomes,
+  endereços, relatos ou anexos da ocorrência. O envio somente ocorre se o próprio usuário
+  concluir o envio no aplicativo de e-mail ou serviço escolhido. Após o compartilhamento,
+  aplicam-se também as regras e políticas do serviço utilizado pelo usuário.
+</p>
+<p>
+  Os registros técnicos permanecem no armazenamento privado do aplicativo e são apagados
+  quando o usuário utiliza a função REDEFINIR APP, além de estarem sujeitos a limitação local
+  de tamanho para reduzir retenção desnecessária.
+</p>
+
+<h2>16. Responsabilidade pelo uso</h2>
 <p>
   As informações inseridas nos relatórios são de responsabilidade do usuário que realiza
   o registro. O usuário deve utilizar o BOI Ágil de forma ética, autorizada e compatível
   com as normas de sua instituição e com a legislação aplicável.
 </p>
 
-<h2>16. Alterações desta política</h2>
+<h2>17. Alterações desta política</h2>
 <p>
   Esta Política de Privacidade poderá ser atualizada quando o BOI Ágil receber novas
   funcionalidades ou quando houver mudanças relevantes nas práticas de tratamento de dados.
   A data da última atualização será indicada no início desta página.
 </p>
 
-<h2>17. Contato sobre privacidade</h2>
-<p>Responsável/desenvolvedor: <strong>Samuel Araújo (Gunees) — Gunees System Technology</strong>.</p>
+<h2>18. Contato sobre privacidade</h2>
+<p>Desenvolvido por: <strong>GUNEES SYSTEM TECHNOLOGY</strong>.</p>
 <p>
   Para dúvidas ou solicitações relacionadas à privacidade, utilize o e-mail
   <a href="mailto:guneessystemtechnology@gmail.com">guneessystemtechnology@gmail.com</a>
