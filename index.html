@@ -71,6 +71,7 @@
   <li>informações sobre vítimas, sinais e sintomas quando registradas;</li>
   <li>informações sobre viaturas e atendimento;</li>
   <li>arquivos selecionados pelo usuário, que podem incluir imagens, vídeos, áudios e documentos;</li>
+  <li>quando o usuário optar pelo recurso, imagem ou print da tela do Vio selecionado exclusivamente para leitura local do número de série do QR da placa;</li>
   <li>logo ou imagem institucional escolhida pelo usuário;</li>
   <li>dados necessários à criação, manutenção e numeração interna dos relatórios;</li>
   <li>dados do aceite eletrônico do contrato, incluindo identificação, assinatura capturada, data, hora, fuso, versão dos termos e informações técnicas de integridade.</li>
@@ -268,7 +269,8 @@
   incluindo ViaCEP, serviço de geocodificação disponível no Android, mecanismo de
   reconhecimento de fala configurado no dispositivo, serviços da Google Play,
   Google Code Scanner para leitura opcional de QR Code em fluxos específicos,
-  modelos embarcados do ML Kit para leitura local da placa no módulo de remoção de veículo,
+  modelos embarcados do ML Kit para leitura local da placa e, quando solicitado pelo usuário,
+  leitura local do número de série em print do Vio no módulo de remoção de veículo,
   aplicativo oficial Vio: QR Seguro, do SERPRO, Portal de Serviços da SENATRAN,
   fonte configurada para atualização do catálogo técnico/jurídico de trânsito e aplicativos
   escolhidos pelo usuário para abrir ou compartilhar arquivos.
@@ -303,6 +305,12 @@
   automaticamente uma fotografia do veículo nem envia as imagens da câmera a servidor próprio.
   Quando a placa reconhecida é do padrão Mercosul, a etapa opcional do QR é realizada no
   aplicativo oficial Vio: QR Seguro, do SERPRO; placas do padrão anterior não recebem essa etapa.
+  Caso o Vio exiba o número de série mas não permita trazê-lo diretamente ao BOI Ágil, o usuário
+  pode fazer uma captura de tela e selecionar esse print no BOI Ágil. A imagem selecionada é
+  processada localmente por OCR para localizar o número de série de 15 caracteres e o aplicativo
+  solicita confirmação antes de preencher o campo. O BOI Ágil não captura automaticamente a tela
+  do Vio, não envia esse print a servidor próprio e não o incorpora automaticamente aos anexos do
+  relatório; a imagem original permanece sob controle do usuário no dispositivo.
   Para a consulta oficial veicular, quando solicitada pelo usuário, o BOI Ágil pode copiar
   temporariamente para a área de transferência o número de série do QR informado e abrir o
   Portal de Serviços da SENATRAN. O próprio usuário conclui a consulta no portal oficial.
