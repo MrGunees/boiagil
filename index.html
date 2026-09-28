@@ -39,7 +39,7 @@
 <body>
 
 <h1>Política de Privacidade — BOI Ágil</h1>
-<p class="muted">Última atualização: 26 de setembro de 2026</p>
+<p class="muted">Última atualização: 28 de setembro de 2026</p>
 
 <div class="box">
   <p>
@@ -112,8 +112,9 @@
 <p>
   A internet não é necessária para preencher, salvar ou gerar um relatório comum.
   Alguns recursos opcionais ou administrativos podem utilizar serviços externos, como
-  consulta de CEP, geocodificação, reconhecimento de fala, Google Play, leitura de QR Code
-  e atualização do catálogo técnico/jurídico de trânsito.
+  consulta de CEP, geocodificação, reconhecimento de fala, Google Play, leitura de QR Code,
+  consulta oficial veicular no Portal de Serviços da SENATRAN e atualização do catálogo
+  técnico/jurídico de trânsito.
 </p>
 <p>
   Nessas operações, o BOI Ágil transmite somente as informações necessárias ao recurso
@@ -266,7 +267,9 @@
   Conforme os recursos utilizados, o BOI Ágil pode interagir com serviços externos,
   incluindo ViaCEP, serviço de geocodificação disponível no Android, mecanismo de
   reconhecimento de fala configurado no dispositivo, serviços da Google Play,
-  Google Code Scanner, modelos embarcados do ML Kit para leitura local de placa/QR,
+  Google Code Scanner para leitura opcional de QR Code em fluxos específicos,
+  modelos embarcados do ML Kit para leitura local da placa no módulo de remoção de veículo,
+  aplicativo oficial Vio: QR Seguro, do SERPRO, Portal de Serviços da SENATRAN,
   fonte configurada para atualização do catálogo técnico/jurídico de trânsito e aplicativos
   escolhidos pelo usuário para abrir ou compartilhar arquivos.
 </p>
@@ -293,13 +296,21 @@
   para gerar correções ortográficas.
 </p>
 <p>
-  A leitura opcional de QR Code em fluxos já existentes pode utilizar o Google Code Scanner.
-  No módulo de remoção de veículo, quando o usuário escolhe ESCANEAR VEÍCULO, a câmera do
-  aparelho captura uma imagem temporária e o aplicativo processa localmente essa imagem com
-  modelos embarcados do ML Kit para reconhecer a placa por OCR e tentar ler QR Code na mesma
-  foto. A imagem temporária usada apenas para a leitura é excluída após o processamento e não
-  é enviada pelo BOI Ágil a servidor próprio. A consulta e o download de atualizações do
-  catálogo, quando configurados, ocorrem por HTTPS e não enviam o conteúdo dos boletins.
+  A leitura opcional de QR Code em outros fluxos do aplicativo pode utilizar o Google Code Scanner.
+  No módulo de remoção de veículo, quando o usuário escolhe ESCANEAR PLACA E QR, o BOI Ágil
+  utiliza a câmera em tempo real e processa localmente os quadros necessários com modelo
+  embarcado do ML Kit para reconhecer somente a placa por OCR. O scanner não salva
+  automaticamente uma fotografia do veículo nem envia as imagens da câmera a servidor próprio.
+  Quando a placa reconhecida é do padrão Mercosul, a etapa opcional do QR é realizada no
+  aplicativo oficial Vio: QR Seguro, do SERPRO; placas do padrão anterior não recebem essa etapa.
+  Para a consulta oficial veicular, quando solicitada pelo usuário, o BOI Ágil pode copiar
+  temporariamente para a área de transferência o número de série do QR informado e abrir o
+  Portal de Serviços da SENATRAN. O próprio usuário conclui a consulta no portal oficial.
+  O BOI Ágil não consulta base própria de veículos e não recebe automaticamente da SENATRAN
+  os dados resultantes da consulta para preencher o relatório. Essas ações somente ocorrem
+  quando iniciadas pelo usuário e ficam sujeitas às políticas e regras dos respectivos
+  serviços oficiais. A consulta e o download de atualizações do catálogo, quando configurados,
+  ocorrem por HTTPS e não enviam o conteúdo dos boletins.
 </p>
 <p>
   O usuário também pode abrir ou compartilhar arquivos utilizando aplicativos e serviços
